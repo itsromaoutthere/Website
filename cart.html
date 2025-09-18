@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Econate - Cart</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* --- Cart Table Styling --- */
+    #cart table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    #cart th, #cart td {
+      text-align: center;
+      padding: 10px;
+      border: 1px solid #ddd;
+    }
+    #cart img {
+      border-radius: 8px;
+      margin-right: 8px;
+      vertical-align: middle;
+    }
+    .qty-btn {
+      padding: 5px 10px;
+      margin: 0 5px;
+      background: #2d6a4f;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .qty-btn:hover {
+      background: #1b4332;
+    }
+    .remove-btn {
+      padding: 5px 12px;
+      background: #d00000;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .remove-btn:hover {
+      background: #9d0208;
+    }
+    #checkout-btn {
+      margin-top: 20px;
+      padding: 12px 20px;
+      background: #2d6a4f;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    #checkout-btn:hover {
+      background: #1b4332;
+    }
+    #cart-summary {
+      margin-top: 20px;
+      text-align: right;
+    }
+  </style>
+</head>
+
+<body>
+
+  <section id="header">
+    <a href="index.html"><img src="img/logo.png" class="logo" alt="Econate Logo"></a>
+    <div>
+      <ul id="navbar">
+        <li><a href="index.html">Home</a></li>
+        <li class="dropdown">
+          <a href="shop.html">Shop <i class="fa fa-caret-down"></i></a>
+          <ul class="dropdown-menu">
+            <li><a href="eco-packaging.html">Eco Packaging</a></li>
+            <li><a href="sustainable-bags.html">Sustainable Bags</a></li>
+            <li><a href="stationery.html">Stationery</a></li>
+            <li><a href="personal-care.html">Personal Care</a></li>
+            <li><a href="kitchen-wares.html">Kitchen Wares</a></li>
+            <li><a href="hotel-amenities.html">Hotel Amenities</a></li>
+            <li><a href="custom-orders.html">Custom Orders</a></li>
+          </ul>
+        </li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li>
+          <a class="active" href="cart.html">
+            <i class="fa fa-shopping-cart"></i>
+            <span id="cart-count">0</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="cart">
+    <h2>My Cart</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Product</th>
+          <th>Price</th>
+          <th>Quantity</th>
+          <th>Subtotal</th>
+          <th>Remove</th>
+        </tr>
+      </thead>
+      <tbody id="cart-items">
+        </tbody>
+    </table>
+
+    <div id="cart-summary">
+      <h3>Total: ₹<span id="cart-total">0</span></h3>
+      <button id="checkout-btn">Checkout on WhatsApp</button>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+
+  <footer>
+    <p>© 2025 EcoNate | All Rights Reserved</p>
+  </footer>
+
+</body>
+</html>

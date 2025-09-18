@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EcoNate - About</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- Header -->
+  <section id="header">
+    <a href="index.html"><img src="img/logo.png" class="logo" alt="EcoNate Logo"></a>
+    <div>
+      <ul id="navbar">
+        <li><a href="index.html">Home</a></li>
+        <li class="dropdown">
+          <a href="shop.html">Shop <i class="fa fa-caret-down"></i></a>
+          <ul class="dropdown-menu">
+            <li><a href="eco-packaging.html">Eco Packaging</a></li>
+            <li><a href="sustainable-bags.html">Sustainable Bags</a></li>
+            <li><a href="stationery.html">Stationery</a></li>
+            <li><a href="personal-care.html">Personal Care</a></li>
+            <li><a href="kitchen-wares.html">Kitchen Wares</a></li>
+            <li><a href="hotel-amenities.html">Hotel Amenities</a></li>
+            <li><a href="custom-orders.html">Custom Orders</a></li>
+          </ul>
+        </li>
+        <li><a class="active" href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li>
+          <a href="cart.html">
+            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+            <span id="cart-count">0</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </section> <!-- ✅ Closed header section properly -->
+
+  <!-- Hero Section -->
+  <!-- Hero Section -->
+<section id="main" style="position: relative; height: 100vh; overflow: hidden;">
+  
+  <!-- Banner Image -->
+  <div id="main-banner" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: url('img/about-us-banner.png') no-repeat center; background-size: cover; transition: opacity 2s;">
+  </div>
+
+  <!-- Overlay text -->
+  <div id="main-text" style="position: absolute; bottom: 50%; left: 50%; transform: translate(-50%, -50%); color: #fff; text-align: center; opacity: 0; transition: opacity 2s, transform 2s;">
+    <h1>About EcoNate</h1>
+    <p>Pioneering sustainable living through innovative eco-friendly products and conscious business practices.</p>
+  </div>
+</section>
+
+<script>
+  window.addEventListener("load", () => {
+    const banner = document.getElementById("main-banner");
+    const heroText = document.getElementById("main-text");
+
+    // After 10 seconds, fade out the banner
+    setTimeout(() => {
+      banner.style.opacity = 0;
+
+      // After banner fades out (2s), fade in and slide up the text
+      setTimeout(() => {
+        heroText.style.opacity = 1;
+        heroText.style.transform = "translate(-50%, -60%)"; // slight upward slide
+      }, 2000); // matches banner fade transition
+    }, 10000); // wait 10 seconds before fading banner
+  });
+</script>
+
+
+<!-- Mission Section -->
+<section class="section-p1" id="mission">
+  <div class="mission-container">
+    <div class="mission-text">
+      <h2>Our Mission</h2>
+      <p>At EcoNate, we believe that sustainable living shouldn't be a luxury—it should be accessible, practical, and beautiful. Our mission is to make eco-friendly choices the easy choice for individuals, families, and businesses worldwide.</p>
+      <p>We’re committed to creating products that not only meet your everyday needs but also contribute to a healthier planet for future generations.</p>
+    </div>
+    
+  </div>
+</section>
+
+<!-- Story Section -->
+<!-- Our Story Section -->
+<section id="our-story" style="display: flex; flex-direction: column; align-items: center; padding: 50px 10%; gap: 50px; background-color: #f9f9f9;">
+
+  <!-- Story Content -->
+  <div style="display: flex; align-items: center; justify-content: center; gap: 50px; flex-wrap: wrap; width: 100%;">
+    <!-- Text -->
+    <div id="story-text" style="flex: 1; min-width: 300px;">
+      <h2>Our Story</h2>
+      <p>
+        EcoNate was founded with a vision to create a world where sustainable living is easy, 
+        accessible, and impactful. Our journey began with a simple idea: to provide high-quality, 
+        eco-friendly products that help individuals and businesses reduce their environmental footprint.
+      </p>
+      <p>
+        From sourcing biodegradable materials to designing innovative packaging solutions, every 
+        step in our process is guided by our commitment to sustainability. We believe that small, 
+        conscious choices can collectively lead to significant environmental change.
+      </p>
+      <p>
+        Over the years, EcoNate has collaborated with multiple businesses, schools, and communities 
+        to spread awareness about eco-conscious practices. Our workshops and educational initiatives 
+        have empowered people to adopt greener habits in their daily lives.
+      </p>
+      <p>
+        Behind EcoNate is a passionate team dedicated to blending innovation with responsibility. 
+        Every product we offer reflects our core values of integrity, sustainability, and social impact. 
+        Our mission continues to inspire us to push boundaries and explore new ways to make the planet 
+        a healthier place for generations to come.
+      </p>
+    </div>
+
+    <!-- Team Image -->
+    <div id="team-image" style="flex: 1; min-width: 300px; text-align: center;">
+      <img src="img/team.jpg" alt="EcoNate Team" style="width: 100%; max-width: 400px; border-radius: 10px;">
+    </div>
+  </div>
+
+  <!-- Founders Section -->
+  <div id="founders" style="width: 100%; text-align: center; margin-top: 50px;">
+    <h2>Meet Our Founders</h2>
+    <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 30px; margin-top: 30px;">
+      
+      <!-- Founder 1 -->
+      <div style="flex: 1; min-width: 200px; max-width: 250px; text-align: center;">
+        <!-- <img src="img/rohit.jpg" alt="Rohit Prasad" style="width: 100%; border-radius: 50%; object-fit: cover;"> -->
+        <h3>Rohit Prasad</h3>
+        <p>Co-founder of EcoNate, passionate about sustainable business solutions and innovation.</p>
+      </div>
+
+      <!-- Founder 2 -->
+      <div style="flex: 1; min-width: 200px; max-width: 250px; text-align: center;">
+        <!-- <img src="img/rahul.jpg" alt="Rahul Purohit" style="width: 100%; border-radius: 50%; object-fit: cover;"> -->
+        <h3>Rahul Purohit</h3>
+        <p>Co-founder of EcoNate, focused on eco-friendly product development and social impact initiatives.</p>
+      </div>
+
+      <!-- Founder 3 -->
+      <div style="flex: 1; min-width: 200px; max-width: 250px; text-align: center;">
+        <!-- <img src="img/roma.jpg" alt="Roma" style="width: 100%; border-radius: 50%; object-fit: cover;"> -->
+        <h3>Roma</h3>
+        <p>Co-founder of EcoNate, driving sustainability education and community awareness programs.</p>
+      </div>
+
+    </div>
+  </div>
+
+</section>
+
+
+
+  <!-- Values Section -->
+  <section class="section-p1" id="values">
+    <h2>Our Values</h2>
+    <div class="category-container">
+      <div class="category-card">
+        <h3>Eco-Friendly</h3>
+        <p>All our products are designed with the environment in mind, using sustainable materials and processes.</p>
+      </div>
+      <div class="category-card">
+        <h3>Biodegradable</h3>
+        <p>Our products naturally decompose, leaving no harmful residue and returning nutrients to the earth.</p>
+      </div>
+      <div class="category-card">
+        <h3>Ethical Sourcing</h3>
+        <p>We partner with suppliers who share our commitment to fair trade and ethical business practices.</p>
+      </div>
+      <div class="category-card">
+        <h3>Community Impact</h3>
+        <p>Every purchase supports local communities and contributes to environmental conservation efforts.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="section-p1" id="cta" style="text-align:center; background: #2d6a4f; color: #fff; padding: 50px 20px;">
+    <h2>Join Our Sustainable Journey</h2>
+    <p>Together, we can create a more sustainable future. Every small step counts, and every conscious choice makes a difference.</p>
+    <a href="shop.html" class="shop-btn">Explore Our Products</a>
+    <a href="contact.html" class="shop-btn" style="background:#1b4332; margin-left:10px;">Get in Touch</a>
+  </section>
+
+  <section id="newsletter">
+  <div class="newsletter-container">
+    <h2>Stay Updated!</h2>
+    <p>Subscribe to our newsletter and get exclusive offers & eco-friendly tips 🌱</p>
+    <form action="#" class="newsletter-form">
+      <input type="email" placeholder="Enter your email" required>
+      <button type="submit">Subscribe</button>
+    </form>
+  </div>
+</section>
+
+<footer id="footer">
+  <div class="footer-container">
+    
+    <!-- Left Side: Logo + Company Name -->
+    <div class="footer-left">
+      <img src="img/econate_whitebg copy.png" alt="Ecocube Logo" class="footer-logo">
+      <h4>Brand by <br>Ecocube Private Limited</h4>
+      
+    </div>
+
+    <!-- Middle: Quick Links -->
+    <div class="footer-middle">
+      <h3>Quick Links</h3>
+      <ul class="footer-links">
+        <li><a href="#product1">Products</a></li>
+       
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+     
+    </div>
+
+    <!-- Right Side: Social Media -->
+    <div class="footer-right">
+      <h3>Follow Us</h3>
+      <div class="social-icons">
+        <a href="https://www.instagram.com/econate.3r?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="mailto:econate3r@gmail.com"><i class="fas fa-envelope"></i></a>
+        <a href="tel:+917597448318"><i class="fas fa-phone"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2025 Ecocube Private Limited | All Rights Reserved</p>
+  </div>
+</footer>
+</section>
+ <script src="script.js"></script>
+</body>     
+
+</html>

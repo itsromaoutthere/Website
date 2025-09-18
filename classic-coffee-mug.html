@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EcoNate - Classic Coffee Mug</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+
+  <style>
+    /* Product Detail Page Styles */
+    #product-detail {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+    }
+
+    #product-images {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    #product-images img {
+      width: 100%;
+      max-height: 400px;
+      object-fit: contain;
+      border-radius: 10px;
+      margin-bottom: 10px;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+
+    #product-images img:hover {
+      transform: scale(1.05);
+    }
+
+    #product-info {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    #product-info h1 {
+      color: #2d6a4f;
+      margin-bottom: 10px;
+    }
+
+    #product-info p {
+      line-height: 1.6;
+      color: #555;
+      margin-bottom: 15px;
+    }
+
+    #product-info h2 {
+      color: #40916c;
+      margin-bottom: 20px;
+    }
+
+    .quantity {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .quantity input {
+      width: 60px;
+      padding: 5px;
+      text-align: center;
+    }
+
+    .add-to-cart-btn {
+      background: #40916c;
+      color: #fff;
+      padding: 12px 25px;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+
+    .add-to-cart-btn:hover {
+      background: #2d6a4f;
+    }
+
+    @media (max-width: 900px) {
+      #product-detail {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+ <!-- Header / Navbar -->
+    <section id="header">
+        <a href="#"><img src="img/logo.png" class="logo" alt="Econate Logo"></a>
+        <div>
+            <ul id="navbar">
+                <li><a class="active" href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="shop.html">Shop <i class="fa fa-caret-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="eco-packaging.html">Eco Packaging</a></li>
+                        <li><a href="sustainable-bags.html">Sustainable Bags</a></li>
+                        <li><a href="stationery.html">Stationery</a></li>
+                        <li><a href="personal-care.html">Personal Care</a></li>
+                        <li><a href="kitchen-wares.html">Kitchen Wares</a></li>
+                        <li><a href="hotel-amenities.html">Hotel Amenities</a></li>
+                        <li><a href="custom-orders.html">Custom Orders</a></li>
+                    </ul>
+                </li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li>
+                    <a href="cart.html">
+                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        <span id="cart-count"></span>
+                    </a>
+                </li>
+            </ul>
+        </div>    
+    </section>
+
+  <!-- Product Detail Section -->
+  <section id="product-detail">
+    <!-- Images -->
+    <div id="product-images">
+      <img src="img\Kitchen-wares-products-img\classic-coffee-mug.png" alt="Bamboo Bottle" id="mainImage">
+      <div style="display: flex; gap: 10px; margin-top: 10px;">
+        <img src="img\Kitchen-wares-products-img\classic-coffee-mug-morecolors.png" alt="Bamboo Bottle Lid" class="thumb">
+        <img src="img\Kitchen-wares-products-img\girl-classic-coffee-mug.png" alt="Bamboo Bottle Side View" class="thumb">
+      </div>
+    </div>
+
+    <!-- Info -->
+    <div id="product-info">
+      <h1>Classic Coffee Mug</h1>
+      <h2>₹80</h2>
+      <p>Crafted from natural rice husk, this 300ml (10oz) mug is a sustainable alternative to plastic and ceramic.</p>
+      <p>Features:</p>
+      <ul>
+        <li>Lightweight, durable, and biodegradable</li>
+        <li>Capacity: 500ml</li>
+        <li>Reusable & Biodegradable</li>
+        <li>It’s perfect for daily use while reducing environmental impact. </li>
+        <li>Available in multiple elegant colors, it combines style with eco-conscious living.</li>
+      </ul>
+
+      <div class="quantity">
+        <label for="qty">Quantity:</label>
+        <input type="number" id="qty" value="1" min="1">
+      </div>
+
+      <a href="#" class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> Add to Cart</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 EcoNate | All Rights Reserved</p>
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

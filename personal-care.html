@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EcoNate - Personal Care</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+  
+
+  <style>
+    /* ✅ Page-specific styles */
+    #product-page {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+
+    #product-page h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 28px;
+      color: #2d6a4f;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 25px;
+    }
+
+    .bottle {
+      background: #fff;
+      border-radius: 12px;
+      padding: 15px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease;
+    }
+
+    .bottle:hover {
+      transform: translateY(-5px);
+    }
+
+    .bottle img {
+      width: 100%;
+      height: 200px;
+      object-fit: contain;
+      margin-bottom: 15px;
+    }
+
+    .des span {
+      font-size: 13px;
+      color: gray;
+    }
+
+    .des h5 {
+      margin: 8px 0;
+      font-size: 16px;
+      font-weight: 600;
+      color: #333;
+    }
+
+    .des h4 {
+      color: #2d6a4f;
+      font-size: 18px;
+      margin: 5px 0;
+    }
+
+    .bottle a {
+      display: inline-block;
+      margin-top: 10px;
+      background: #40916c;
+      color: #fff;
+      padding: 10px 15px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+
+    .bottle a:hover {
+      background: #2d6a4f;
+    }
+
+    /* Search & Sort Bar */
+    .search-sort { display: flex; justify-content: space-between; margin-bottom: 25px; gap: 10px; flex-wrap: wrap; }
+    .search-sort input, .search-sort select {
+      padding: 8px 12px; border-radius: 8px; border: 1px solid #ccc; font-size: 14px; width: 48%;
+    }
+    @media(max-width:600px){ .search-sort input, .search-sort select{ width:100%; } }
+    
+
+    /* Responsive tweaks */
+    @media (max-width: 600px) {
+      .bottle img {
+        height: 160px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <section id="header">
+    <a href="index.html"><img src="img/logo.png" class="logo" alt="EcoNate Logo"></a>
+    <div>
+      <ul id="navbar">
+        <li><a href="index.html">Home</a></li>
+        <li class="dropdown">
+          <a href="shop.html">Shop <i class="fa fa-caret-down"></i></a>
+          <ul class="dropdown-menu">
+            <li><a href="eco-packaging.html">Eco Packaging</a></li>
+            <li><a href="sustainable-bags.html">Sustainable Bags</a></li>
+            <li><a href="stationery.html">Stationery</a></li>
+            <li><a href="personal-care.html">Personal Care</a></li>
+            <li><a class="active" href="kitchen-wares.html">Kitchen Wares</a></li>
+            <li><a href="hotel-amenities.html">Hotel Amenities</a></li>
+            <li><a href="custom-orders.html">Custom Orders</a></li>
+          </ul>
+        </li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="cart.html"><i class="fa fa-shopping-cart"></i> <span id="cart-count">0</span></a></li>
+      </ul>
+    </div>
+  </section>
+  
+
+  <section id="product-page">
+    <h2>Eco-Friendly Personal Care</h2>
+    <!-- Search & Sort -->
+    <div class="search-sort">
+      <input type="text" id="searchInput" placeholder="Search products...">
+      <select id="sortSelect">
+        <option value="default">Sort By</option>
+        <option value="low">Price: Low to High</option>
+        <option value="high">Price: High to Low</option>
+        <option value="name">Name: A-Z</option>
+      </select>
+    </div>
+      
+    <div class="product-grid">
+
+      <!-- Product 1 -->
+            <div class="bottle"> 
+                <img src="img/bottle.png" alt="Eco Bottle">
+                <div class="des">
+                    <span>450ml</span>
+                    <h5>Bamboo Handle Tumbler</h5>
+                    <h4>&#8377;375</h4>
+                </div>
+                <a href="#"><i class="fa fa-shopping-cart"></i></a>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="bottle"> 
+                <img src="img/tumbler.png" alt="Eco Bottle">
+                <div class="des">
+                    <span>450ml</span>
+                    <h5>Bamboo Tumbler</h5>
+                    <h4>&#8377;285</h4>
+                </div>
+                <a href="#"><i class="fa fa-shopping-cart"></i></a>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="bottle" onclick="window.location.href='bamboo-bottle.html'"> 
+                
+                <img src="img/bottle2.png" alt="Eco Bottle">
+                <div class="des">
+                    <span>500ml</span>
+                    <h5>Bamboo bottle</h5>
+                    <h4>&#8377;400</h4>
+                </div>
+                <a href="#"><i class="fa fa-shopping-cart"></i></a>
+                
+            </div>
+
+            <!-- Product 4 -->
+            <div class="bottle"> 
+                <img src="img/mug.png" alt="Eco Bottle">
+                <div class="des">
+                    <span>250ml</span>
+                    <h5>Bamboo Mug</h5>
+                    <h4>&#8377;385</h4>
+                </div>
+                <a href="#"><i class="fa fa-shopping-cart"></i></a>
+            </div>
+
+
+      <div class="bottle"> 
+        <img src="img/Kitchen-wares-products-img\duo-mug.png" alt="Bamboo Cutlery Set">
+        <div class="des">
+          <span>300ml</span>
+          <h5>Duo Mug</h5>
+          <h4>₹199</h4>
+        </div>
+        <a href="#"><i class="fa fa-shopping-cart"></i></a>
+      </div>
+
+      <div class="bottle"> 
+        <img src="img/Kitchen-wares-products-img\large-cutlery.png" alt="Wooden Spoon Set">
+        <div class="des">
+          <span>Pack of 3</span>
+          <h5>Cutlery Set</h5>
+          <h4>₹150</h4>
+        </div>
+        <a href="#"><i class="fa fa-shopping-cart"></i></a>
+      </div>
+
+      <div class="bottle" > 
+        <img src="img\Kitchen-wares-products-img\classic-coffee-mug.png" alt="Coconut Bowl">
+        <div class="des">
+          <span>300ml</span>
+          <h5>Classic Coffee Mug</h5>
+          <h4>₹70</h4>
+        </div>
+        <a href="#"><i class="fa fa-shopping-cart"></i></a>
+      </div>
+
+      <div class="bottle" onclick="window.location.href='majestic-mug.html'">
+        <img src="img\Kitchen-wares-products-img\majestic-mug.png" alt="Coconut Bowl">
+        <div class="des">
+          <span>300ml</span>
+          <h5>Mazestic Mug</h5>
+          <h4>₹74</h4>
+        </div>
+        <a href="#"><i class="fa fa-shopping-cart"></i></a>
+      </div>
+
+      <div class="bottle"> 
+        <img src="img\Kitchen-wares-products-img\frosted-tumbler.png" alt="Coconut Bowl">
+        <div class="des">
+          <span>375ml</span>
+          <h5>Frosted Tumbler</h5>
+          <h4>₹164</h4>
+        </div>
+        <a href="#"><i class="fa fa-shopping-cart"></i></a>
+      </div>
+
+      <div class="bottle"> 
+        <img src="img\Kitchen-wares-products-img\cutting-chai-cup.png" alt="Coconut Bowl">
+        <div class="des">
+          <span>375ml</span>
+          <h5>Cutting Chai Cup</h5>
+          <h4>₹69</h4>
+        </div>
+        <a href="#"><i class="fa fa-shopping-cart"></i></a>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 EcoNate | All Rights Reserved</p>
+  </footer>
+   
+
+  <script src="script.js"></script>
+
+  
+</body>
+</html>
