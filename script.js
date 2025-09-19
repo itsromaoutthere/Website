@@ -98,10 +98,6 @@ function init() {
       updateCartCount();
       showPopup(`${name} has been added to cart`);
 
-      // Redirect to cart page after a short delay
-      setTimeout(() => {
-        window.location.href = 'cart.html';
-      }, 1000);
     });
   });
 
@@ -220,3 +216,5 @@ if (sortSelect) {
     sorted.forEach(p => grid.appendChild(p));
   });
 }
+
+

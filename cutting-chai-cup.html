@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EcoNate - Cutting chai cup</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+
+  <style>
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: #f9fafb;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Product Detail Page Styles */
+    #product-detail {
+      max-width: 1200px;
+      margin: 50px auto;
+      padding: 30px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    /* Images */
+    #product-images {
+      flex: 1;
+      min-width: 300px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    #product-images img.preview-img {
+      width: 100%;
+      max-height: 420px;
+      object-fit: contain;
+      border-radius: 12px;
+      margin-bottom: 10px;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+
+    #product-images img.preview-img:hover {
+      transform: scale(1.05);
+    }
+
+    #product-images .thumb-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      width: 100%;
+    }
+
+    #product-images .thumb {
+      flex: 1 1 30%;
+      max-width: 120px;
+      cursor: pointer;
+      border-radius: 8px;
+      object-fit: contain;
+      transition: transform 0.2s ease;
+    }
+
+    #product-images .thumb:hover {
+      transform: scale(1.05);
+    }
+
+    /* Product Info */
+    #product-info {
+      flex: 1;
+      min-width: 320px;
+    }
+
+    #product-info h1 {
+      color: #2d6a4f;
+      margin-bottom: 10px;
+      font-size: 32px;
+    }
+
+    #product-info h2 {
+      color: #40916c;
+      margin-bottom: 20px;
+      font-size: 24px;
+    }
+
+    #product-info p {
+      line-height: 1.6;
+      color: #444;
+      margin-bottom: 15px;
+    }
+
+    #product-info ul {
+      list-style: none;
+      padding: 0;
+      margin: 15px 0;
+    }
+
+    #product-info ul li {
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    #product-info ul li::before {
+      content: "✔ ";
+      color: #2d6a4f;
+      font-weight: bold;
+    }
+
+    .quantity {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 20px 0;
+    }
+
+    .quantity input {
+      width: 60px;
+      padding: 5px;
+      text-align: center;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    .add-to-cart-btn {
+      background: linear-gradient(135deg, #52b788, #40916c);
+      color: #fff;
+      padding: 14px 28px;
+      border-radius: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      text-decoration: none;
+      font-weight: bold;
+      display: inline-block;
+      transition: all 0.3s;
+      border: none;
+    }
+
+    .add-to-cart-btn:hover {
+      background: #2d6a4f;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+
+    footer {
+      background: #2d6a4f;
+      color: #fff;
+      text-align: center;
+      padding: 15px 0;
+      margin-top: 50px;
+    }
+
+    /* Modal Image Preview */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 9999;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      text-align: center;
+    }
+
+    .modal-content {
+      margin-top: 60px;
+      max-width: 90%;
+      max-height: 80vh;
+      border-radius: 10px;
+    }
+
+    .close {
+      position: absolute;
+      top: 20px;
+      right: 40px;
+      color: white;
+      font-size: 40px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    @media (max-width: 900px) {
+      #product-detail {
+        flex-direction: column;
+      }
+      #product-images .thumb-container .thumb {
+        max-width: 90px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+ <!-- Header / Navbar -->
+ <section id="header">
+    <a href="#"><img src="img/logo.png" class="logo" alt="Econate Logo"></a>
+    <div>
+      <ul id="navbar">
+        <li><a href="index.html">Home</a></li>
+        <li class="dropdown">
+          <a class="active" href="shop.html">Shop <i class="fa fa-caret-down"></i></a>
+          <ul class="dropdown-menu">
+            <li><a href="eco-packaging.html">Eco Packaging</a></li>
+            <li><a href="sustainable-bags.html">Sustainable Bags</a></li>
+            <li><a href="stationery.html">Stationery</a></li>
+            <li><a href="personal-care.html">Personal Care</a></li>
+            <li><a href="kitchen-wares.html">Kitchen Wares</a></li>
+            <li><a href="hotel-amenities.html">Hotel Amenities</a></li>
+            <li><a href="custom-orders.html">Custom Orders</a></li>
+          </ul>
+        </li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li>
+          <a href="cart.html">
+            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+            <span id="cart-count"></span>
+          </a>
+        </li>
+      </ul>
+    </div>    
+ </section>
+
+  <!-- Product Detail Section -->
+  <section id="product-detail">
+    <!-- Images -->
+    <div id="product-images">
+      <img src="img/Kitchen-wares-products-img/cutting-chai-cup.png" alt="Duo Mug" class="preview-img">
+      <div class="thumb-container">
+        <img src="img/Kitchen-wares-products-img/cutting-chai-cup-morecolors.png" alt="Duo Mug Lid" class="thumb preview-img">
+        <img src="img/Kitchen-wares-products-img/man-cutting-chai-cup.png" alt="Duo Mug Side View" class="thumb preview-img">
+       
+      </div>
+    </div>
+
+    <!-- Product Info -->
+    <div id="product-info" 
+         class="bottle" 
+         data-name="Duo Mug" 
+         data-price="199" 
+         data-img="img/Kitchen-wares-products-img/duo-mug.png">
+         
+      <h1>Cutting Chai</h1>
+<h2>₹69</h2>
+<p>Authentic Indian-style Cutting Chai, served in a small glass for that perfect tea break. Strong, flavorful, and energizing—ideal for a quick refreshment anytime.</p>
+<p><strong>Features:</strong></p>
+<ul>
+  <li>Material: Premium Assam Tea Leaves</li>
+  <li>Serving Size: Small Cutting (approx. 120ml)</li>
+  <li>Rich & Aromatic Flavor</li>
+  <li>Quick Brew, Ready to Serve</li>
+  <li>Perfect for Office, Street Tea Lovers, or Home</li>
+</ul>
+
+
+      <div class="quantity">
+        <label for="qty">Quantity:</label>
+        <input type="number" id="qty" value="1" min="1">
+      </div>
+
+      <button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> Add to Cart</button>
+    </div>
+  </section>
+
+  <!-- Modal for Image Preview -->
+  <div id="imageModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modalImage">
+  </div>
+
+  <!-- Footer -->
+  <footer id="footer">
+    <div class="footer-container">
+      <div class="footer-left">
+        <img src="img/econate_whitebg copy.png" alt="Ecocube Logo" class="footer-logo">
+        <h4>Brand by <br>Ecocube Private Limited</h4>
+      </div>
+
+      <div class="footer-middle">
+        <h3>Quick Links</h3>
+        <ul class="footer-links">
+          <li><a href="#product1">Products</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-right">
+        <h3>Follow Us</h3>
+        <div class="social-icons">
+          <a href="https://www.instagram.com/econate.3r" target="_blank">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="mailto:econate3r@gmail.com"><i class="fas fa-envelope"></i></a>
+          <a href="tel:+917597448318"><i class="fas fa-phone"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2025 Ecocube Private Limited | All Rights Reserved</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    // Image full screen preview
+    const modal = document.getElementById("imageModal");
+    const modalImg = document.getElementById("modalImage");
+    const closeBtn = document.querySelector(".close");
+
+    document.querySelectorAll(".preview-img").forEach(img => {
+      img.addEventListener("click", () => {
+        modal.style.display = "block";
+        modalImg.src = img.src;
+      });
+    });
+
+    closeBtn.onclick = function() {
+      modal.style.display = "none";
+    };
+
+    window.onclick = function(e) {
+      if (e.target === modal) {
+        modal.style.display = "none";
+      }
+    };
+  </script>
+</body>
+</html>
